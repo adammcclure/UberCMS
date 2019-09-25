@@ -1,0 +1,5 @@
+    RewriteEngine On
+    RewriteRule ^$           main  [QSA]
+    RewriteRule ^index\.php$ ubercms.php?page=main  [QSA]
+    RewriteCond %{REQUEST_URI} !(/includes/|/pub)
+    RewriteRule ^([A-Za-z0-9\/]+)/?$ ubercms.php?page=$1 [QSA]
